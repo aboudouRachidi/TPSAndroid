@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Numero ISBN"
+        android:ems="10"
+        android:id="@+id/editTextNumeroIsbn"
+        android:layout_below="@+id/editTextTitreLivre"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:id="@+id/btnAddLivre"
+        android:layout_below="@+id/editTextNumeroIsbn"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Titre du livre"
+        android:ems="10"
+        android:id="@+id/editTextTitreLivre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rechercher"
+        android:id="@+id/btnSearchLivre"
+        android:layout_toRightOf="@+id/btnAddLivre"
+        android:layout_below="@+id/editTextNumeroIsbn" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modifier"
+        android:id="@+id/btnUpdateLivre"
+        android:layout_toRightOf="@+id/btnSearchLivre"
+        android:layout_below="@+id/editTextNumeroIsbn" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Afficher"
+        android:id="@+id/btnAfficherLivre"
+        android:layout_toRightOf="@+id/btnUpdateLivre"
+        android:layout_below="@+id/editTextNumeroIsbn" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Nouveau titre"
+        android:ems="10"
+        android:layout_below="@+id/btnAddLivre"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editTextNouveauTitre" />
+</RelativeLayout>

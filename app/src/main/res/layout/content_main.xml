@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.rachidi.tpsandroid.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="TP 0-1-2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAlignment="center"/>
+
+
+    <TextView
+        android:id="@+id/textViewNom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewTitle"
+        android:text="Nom"/>
+    <EditText
+        android:id="@+id/editTextNom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewNom"
+        android:hint="Saisir Nom"/>
+
+    <Button
+        android:id="@+id/btnValider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editTextNom"
+        android:layout_below="@+id/editTextNom"
+        android:text="Valider"/>
+    <Button
+        android:id="@+id/btnAnnuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnValider"
+        android:layout_toLeftOf="@+id/btnValider"
+        android:text="Annuler"/>
+    <ImageView
+        android:id="@+id/imageViewTrait"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="@android:color/background_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/btnAnnuler"/>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewTrait"/>
+    <ImageView
+        android:id="@+id/imageViewBeethoven"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/imageViewTrait"
+        android:visibility="invisible"
+        android:src="@drawable/beethoven"/>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnPause"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btnQuitter"
+        android:visibility="invisible"
+        android:text="Arrêter"/>
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnQuitter"
+        android:layout_toRightOf="@+id/btnLire"
+        android:visibility="invisible"
+        android:text="Pause"/>
+    <Button
+        android:id="@+id/btnLire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnQuitter"
+        android:visibility="invisible"
+        android:text="Lire Musique"/>
+
+    <Button
+        android:id="@+id/btnQuitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Quiter"/>
+</RelativeLayout>
