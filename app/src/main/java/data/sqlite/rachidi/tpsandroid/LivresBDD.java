@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+
 /**
  * Created by RACHIDI on 09/11/2016.
  */
@@ -75,30 +77,6 @@ public class LivresBDD {
         return cursorToLivre(c);
     }
 
-    public Livre getAll(){
-
-        Cursor c = bdd.rawQuery("SELECT * FROM TABLE_LIVRES",null);
-        return cursor(c);
-    }
-    private Livre cursor(Cursor c){
-        //si aucun élément n'a été retourné dans la requête, on renvoie null
-        if (c.getCount() == 0)
-            return null;
-
-        //Sinon on se place sur le premier élément
-        c.moveToPosition(8);
-        //On créé un livre
-        Livre livre = new Livre();
-        //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
-        livre.setId(c.getInt(NUM_COL_ID));
-        livre.setIsbn(c.getString(NUM_COL_ISBN));
-        livre.setTitre(c.getString(NUM_COL_TITRE));
-        //On ferme le cursor
-        c.close();
-
-        //On retourne le livre
-        return livre;
-    }
     //Cette méthode permet de convertir un cursor en un livre
     private Livre cursorToLivre(Cursor c){
         //si aucun élément n'a été retourné dans la requête, on renvoie null
@@ -118,5 +96,34 @@ public class LivresBDD {
 
         //On retourne le livre
         return livre;
+    }
+
+    /**
+     * Retourne toutes les planètes de la base de données.
+     *
+     * @return Un ArrayList<Planete> contenant toutes les planètes de la BD
+     */
+    public ArrayList<Livre> getAllLivres() {
+        Cursor c = bdd.query(TABLE_LIVRES, new String[] {
+                        COL_ID, COL_ISBN, COL_TITRE}, null, null, null,
+                null, null);
+        return cursorToLivres(c);
+    }
+    private ArrayList<Livre> cursorToLivres(Cursor c) {
+// Si la requête ne renvoie pas de résultat
+        if (c.getCount() == 0)
+            return new ArrayList<Livre>(0);
+        ArrayList<Livre> retLivres = new ArrayList<Livre>(c.getCount());
+        c.moveToFirst();
+        do {
+            Livre livre = new Livre();
+            livre.setId(c.getInt(c.getColumnIndex(COL_ID)));
+            livre.setIsbn(c.getString(c.getColumnIndex(COL_ISBN)));
+            livre.setTitre(c.getString(c.getColumnIndex(COL_TITRE)));
+            retLivres.add(livre);
+        } while (c.moveToNext());
+// Ferme le curseur pour libérer les ressources
+        c.close();
+        return retLivres;
     }
 }

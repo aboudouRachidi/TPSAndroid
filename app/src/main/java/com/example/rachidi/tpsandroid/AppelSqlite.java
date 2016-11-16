@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import data.sqlite.rachidi.tpsandroid.Livre;
 import data.sqlite.rachidi.tpsandroid.LivresBDD;
 
@@ -106,7 +108,7 @@ public class AppelSqlite extends AppCompatActivity{
 
                 //Pour vérifier que l'on a bien créé notre livre dans la BDD
                 //on extrait le livre de la BDD grâce au titre du livre que l'on a créé précédemment
-                Livre livreFromBdd = livreBdd.getAll();
+                ArrayList<Livre> livreFromBdd = livreBdd.getAllLivres();
                 //Si un livre est retourné (donc si le livre à bien été ajouté à la BDD)
                 if(livreFromBdd != null) {
                     //On affiche les infos du livre dans un Toast
