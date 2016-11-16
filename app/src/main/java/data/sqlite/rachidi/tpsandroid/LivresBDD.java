@@ -99,9 +99,9 @@ public class LivresBDD {
     }
 
     /**
-     * Retourne toutes les planètes de la base de données.
+     * Retourne toutes les Livres de la base de données.
      *
-     * @return Un ArrayList<Planete> contenant toutes les planètes de la BD
+     * @return Un ArrayList<Livre> contenant toutes les Livres de la BDD
      */
     public ArrayList<Livre> getAllLivres() {
         Cursor c = bdd.query(TABLE_LIVRES, new String[] {

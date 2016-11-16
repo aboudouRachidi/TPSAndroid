@@ -1,6 +1,7 @@
 package com.example.rachidi.tpsandroid;
 
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -113,9 +114,11 @@ public class AppelSqlite extends AppCompatActivity{
                 if(livreFromBdd != null) {
                     //On affiche les infos du livre dans un Toast
                     Toast.makeText(getBaseContext(), livreFromBdd.toString(), Toast.LENGTH_LONG).show();
+                    showMessage("Livres",livreFromBdd.toString());
                 }
             }
         });
+
 /*
         //Pour vérifier que l'on a bien créé notre livre dans la BDD
         //on extrait le livre de la BDD grâce au titre du livre que l'on a créé précédemment
@@ -154,5 +157,13 @@ public class AppelSqlite extends AppCompatActivity{
         }
 
         livreBdd.close();*/
+    }
+
+    public void showMessage(String title, String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
     }
 }
