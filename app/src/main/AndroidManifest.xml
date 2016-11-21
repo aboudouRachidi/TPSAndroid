@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rachidi.tpsandroid">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +19,7 @@
         </activity>
         <activity android:name=".AppelGoogle"></activity>
         <activity android:name=".AppelSqlite"></activity>
+        <activity android:name="tp.synthese.rachidi.tpsandroid.Convertisseur"></activity>
     </application>
 
 </manifest>

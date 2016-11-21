@@ -14,9 +14,10 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import tp.synthese.rachidi.tpsandroid.Convertisseur;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -104,6 +105,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    /*********************************************************************
+     *********************************************************************
+     **********************CREATION D'UN MENU*****************************
+     *********************************************************************/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -116,7 +122,19 @@ public class MainActivity extends AppCompatActivity {
         TextView message = (TextView) findViewById(R.id.textViewMessage);
         switch (item.getItemId()) {
 
+            case R.id.action_accueil:
+
+                Toast.makeText(getBaseContext(),"Vous avez choisi l' "+item.getTitle(), Toast.LENGTH_LONG).show();
+
+                Intent accueil = new Intent(this, MainActivity.class);
+
+                startActivity(accueil);
+
+                return true;
+
             case R.id.action_google:
+
+                Toast.makeText(getBaseContext(),"Vous avez choisi le "+item.getTitle(), Toast.LENGTH_LONG).show();
 
                 Intent google = new Intent(MainActivity.this, AppelGoogle.class);
 
@@ -133,10 +151,25 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(sqlite);
                 return true;
 
+            case R.id.action_tpSynthese:
+
+                Toast.makeText(getBaseContext(),"Vous avez choisi le "+item.getTitle(), Toast.LENGTH_LONG).show();
+
+                Intent tpSyntheseConvertisseur = new Intent(MainActivity.this, Convertisseur.class);
+
+                startActivity(tpSyntheseConvertisseur);
+                return true;
+
             case R.id.action_help:
 
                 message.setText("Vous devez saisir votre nom pour ensuite ecouter une musique !");
 
+                return true;
+
+            case R.id.action_quitter:
+
+                Toast.makeText(getBaseContext(),"A bientôt !", Toast.LENGTH_LONG).show();
+                System.exit(0);
                 return true;
 
             case R.id.action_settings:

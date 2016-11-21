@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rachidi.tpsandroid.MainActivity">
     <item
+        android:id="@+id/action_accueil"
+        android:orderInCategory="100"
+        android:title="Accueil" />
+    <item
         android:id="@+id/action_google"
         android:orderInCategory="100"
         android:title="TP n°3 Google" />
@@ -11,9 +15,17 @@
         android:orderInCategory="100"
         android:title="TP n°4 SQLITE" />
     <item
+        android:id="@+id/action_tpSynthese"
+        android:orderInCategory="100"
+        android:title="TP SYNTHESE" />
+    <item
         android:id="@+id/action_help"
         android:orderInCategory="100"
         android:title="Aide" />
+    <item
+        android:id="@+id/action_quitter"
+        android:orderInCategory="100"
+        android:title="Quitter" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
