@@ -92,11 +92,10 @@ public class Convertisseur extends AppCompatActivity {
 
     public void conversion()
     {
-        // On déclare nos variables utile à la fonction
-        // Multiplicateur pour conversion en euro
-        double dollar = 1.06295;
-        // Multiplicateur pour conversion en dollar
-        double euro = 0.940774;
+        // Multiplicateur(Taux de change) pour conversion en euro
+        double dollar = 1.06240;
+        // Multiplicateur(Taux de change) pour conversion en dollar
+        double euro = 0.94126;
         // Montant de la l'EditText avec conversion en type double
         double montant = Double.parseDouble(editTextMontant.getText().toString());
         // Résultat de la conversion
