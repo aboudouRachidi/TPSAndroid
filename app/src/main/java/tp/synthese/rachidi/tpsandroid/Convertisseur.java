@@ -200,17 +200,7 @@ public class Convertisseur extends AppCompatActivity {
                 Toast.makeText(getBaseContext(),"Vous avez choisi l'item "+item.getTitle(), Toast.LENGTH_LONG).show();
 
                 return true;
-
         }
-
         return false;
-        /*int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);*/
     }
 }
