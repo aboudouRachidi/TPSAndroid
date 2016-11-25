@@ -20,6 +20,7 @@
         <activity android:name=".AppelGoogle"></activity>
         <activity android:name=".AppelSqlite"></activity>
         <activity android:name="tp.synthese.rachidi.tpsandroid.Convertisseur"></activity>
+        <activity android:name="synthese.data.sqlite.rachidi.tpsandroid.views.ViewChildActivity"></activity>
     </application>
 
 </manifest>

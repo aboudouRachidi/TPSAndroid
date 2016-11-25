@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Login"
+        android:ems="10"
+        android:id="@+id/editTextLogin"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Mot de passe"
+        android:ems="10"
+        android:id="@+id/editTextMdp"
+        android:layout_below="@+id/editTextLogin"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:id="@+id/btnAddAdmin"
+        android:layout_below="@+id/editTextMdp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Rechercher"
+    android:id="@+id/btnSearchAdmin"
+    android:layout_toRightOf="@+id/btnAddAdmin"
+    android:layout_below="@+id/editTextMdp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:id="@+id/btnConnexion"
+        android:layout_toRightOf="@+id/btnSearchAdmin"
+        android:layout_below="@+id/editTextMdp" />
+</RelativeLayout>
