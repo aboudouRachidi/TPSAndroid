@@ -40,10 +40,10 @@ public class Convertisseur extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_convertisseur);
+        setContentView(R.layout.activity_convertisseur);//appel de la vue(layout) du convertisseur
 
 
-        // On instancie nos éléments avec leur id de la vue
+        // On instancie nos éléments avec leur id de la vue *remarque les id sont tres explicite pour mieux coder
         editTextMontant = (EditText) findViewById(R.id.editTextMontant);
         radioEuro = (RadioButton) findViewById(R.id.radioEuro);
         radioDollar = (RadioButton) findViewById(R.id.radioDollar);
@@ -51,19 +51,25 @@ public class Convertisseur extends AppCompatActivity {
         btnConvertir = (Button) findViewById(R.id.btnConvertir);
 
 
-
+        //une petite condition pour decocher le radio bouton euro quand :
+        //on converti en dollar puis en euro pour revenir ensuite sur le dollar si l'on quitte pas l'application
         radioDollar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 radioEuro.setChecked(false);
             }
         });
+        //meme condition que le precedent
         radioEuro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 radioDollar.setChecked(false);
             }
         });
+
+        //action du boutton valider **remaque son id : btnConvertir
         btnConvertir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -142,11 +148,11 @@ public class Convertisseur extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        TextView message = (TextView) findViewById(R.id.textViewMessage);
+
         switch (item.getItemId()) {
 
             case R.id.action_accueil:
-
+                //Toast qui permet d'afficher en supplement l'onglet/l'item qu on a choisi
                 Toast.makeText(getBaseContext(),"Vous avez choisi l' "+item.getTitle(), Toast.LENGTH_LONG).show();
 
                 Intent accueil = new Intent(this, MainActivity.class);
@@ -156,7 +162,7 @@ public class Convertisseur extends AppCompatActivity {
                 return true;
 
             case R.id.action_google:
-
+                //Toast qui permet d'afficher en supplement l'onglet/l'item qu on a choisi
                 Toast.makeText(getBaseContext(),"Vous avez choisi le "+item.getTitle(), Toast.LENGTH_LONG).show();
 
                 Intent google = new Intent(this, AppelGoogle.class);
@@ -166,7 +172,7 @@ public class Convertisseur extends AppCompatActivity {
                 return true;
 
             case R.id.action_tp4:
-
+                //Toast qui permet d'afficher en supplement l'onglet/l'item qu on a choisi
                 Toast.makeText(getBaseContext(),"Vous avez choisi le "+item.getTitle(), Toast.LENGTH_LONG).show();
 
                 Intent sqlite = new Intent(this, AppelSqlite.class);
@@ -175,7 +181,7 @@ public class Convertisseur extends AppCompatActivity {
                 return true;
 
             case R.id.action_tpSynthese:
-
+                //Toast qui permet d'afficher en supplement l'onglet/l'item qu on a choisi
                 Toast.makeText(getBaseContext(),"Vous avez choisi le "+item.getTitle(), Toast.LENGTH_LONG).show();
 
                 Intent tpSyntheseConvertisseur = new Intent(this, Convertisseur.class);
@@ -184,19 +190,19 @@ public class Convertisseur extends AppCompatActivity {
                 return true;
 
             case R.id.action_help:
-
+                //Toast qui permet d'afficher un message d'aide pour l'utilisation d'une activité
                 Toast.makeText(getBaseContext(),"Cet interface vous permet de convertir en Euro <-> Dollar !", Toast.LENGTH_LONG).show();
 
                 return true;
 
             case R.id.action_quitter:
-
+                //Toast qui permet d'afficher un message apres avoir quitter l'application
                 Toast.makeText(getBaseContext(),"A bientôt !", Toast.LENGTH_LONG).show();
                 System.exit(0);
                 return true;
 
             case R.id.action_settings:
-
+                //Toast de test par defaut
                 Toast.makeText(getBaseContext(),"Vous avez choisi l'item "+item.getTitle(), Toast.LENGTH_LONG).show();
 
                 return true;

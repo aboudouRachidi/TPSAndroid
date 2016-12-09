@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestion Admin"
+        android:id="@+id/textViewGestionAdmin"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Login"
+        android:ems="10"
+        android:id="@+id/editTextLogin"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewGestionAdmin"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Mot de passe"
+        android:ems="10"
+        android:id="@+id/editTextMdp"
+        android:layout_below="@+id/editTextLogin"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:id="@+id/btnAddAdmin"
+        android:layout_below="@+id/editTextMdp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rechercher"
+        android:id="@+id/btnSearchAdmin"
+        android:layout_toRightOf="@+id/btnAddAdmin"
+        android:layout_below="@+id/editTextMdp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Afficher"
+        android:id="@+id/btnAfficherAdmin"
+        android:layout_below="@+id/btnAddAdmin" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supprimer"
+        android:id="@+id/btnSupprimerAdmin"
+        android:layout_below="@+id/btnAddAdmin"
+        android:layout_toRightOf="@+id/btnAfficherAdmin"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestion Url "
+        android:id="@+id/textViewGestionUrl"
+        android:layout_below="@+id/btnAfficherAdmin"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Titre url"
+        android:ems="10"
+        android:id="@+id/editTextTitreUrl"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewGestionUrl"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Url"
+        android:ems="10"
+        android:id="@+id/editTextUrl"
+        android:layout_below="@+id/editTextTitreUrl"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:id="@+id/btnAddUrl"
+        android:layout_below="@+id/editTextUrl"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rechercher"
+        android:id="@+id/btnSearchUrl"
+        android:layout_toRightOf="@+id/btnAddUrl"
+        android:layout_below="@+id/editTextUrl" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Afficher"
+        android:id="@+id/btnAfficherUrl"
+        android:layout_below="@+id/btnAddUrl" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supprimer"
+        android:id="@+id/btnSupprimerUrl"
+        android:layout_below="@+id/btnAddUrl"
+        android:layout_toRightOf="@+id/btnAfficherUrl"/>
+</RelativeLayout>

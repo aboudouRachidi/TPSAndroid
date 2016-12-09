@@ -1,4 +1,4 @@
-package synthese.data.sqlite.rachidi.tpsandroid;
+package synthese.data.sqlite.rachidi.tpsandroid.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -55,7 +55,8 @@ public class childBddCreate extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //On peut faire ce qu'on veut ici moi j'ai décidé de supprimer la table et de la recréer
         //comme ça lorsque je change la version les id repartent de 0
-        db.execSQL("DROP TABLE " + TABLE_CHILD + ";");
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CHILD + ";");
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_ADMINISTRATEUR + ";");
         onCreate(db);
     }
 }

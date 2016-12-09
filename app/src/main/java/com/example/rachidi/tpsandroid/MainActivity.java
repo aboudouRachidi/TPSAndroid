@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import synthese.data.sqlite.rachidi.tpsandroid.views.ViewChildActivity;
+import synthese.data.sqlite.rachidi.tpsandroid.views.ViewLoginActivity;
 import tp.synthese.rachidi.tpsandroid.Convertisseur;
 
 public class MainActivity extends AppCompatActivity {
@@ -165,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(getBaseContext(),"Vous avez choisi le "+item.getTitle(), Toast.LENGTH_LONG).show();
 
-                Intent tpSyntheseSqlite = new Intent(MainActivity.this, ViewChildActivity.class);
+                Intent tpSyntheseSqlite = new Intent(MainActivity.this, ViewLoginActivity.class);
 
                 startActivity(tpSyntheseSqlite);
                 return true;

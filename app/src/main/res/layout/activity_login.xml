@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Login"
+        android:ems="10"
+        android:id="@+id/editTextLogin"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="100dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Mot de passe"
+        android:ems="10"
+        android:id="@+id/editTextMdp"
+        android:layout_below="@+id/editTextLogin"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="100dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:id="@+id/btnConnexion"
+        android:layout_toRightOf="@+id/btnSearchAdmin"
+        android:layout_below="@+id/editTextMdp"
+        android:layout_marginLeft="100dp"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Mode enfant"
+        android:id="@+id/btnConnexionEnfant"
+        android:layout_alignParentLeft="true"/>
+</RelativeLayout>

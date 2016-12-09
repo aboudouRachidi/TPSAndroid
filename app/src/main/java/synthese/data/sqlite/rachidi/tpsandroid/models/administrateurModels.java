@@ -52,6 +52,6 @@ public class administrateurModels {
     }
 
     public String toString(){
-        return "Admin  : "+Login;
+        return "Admin  : "+Login+"mdp  : "+Mdp;
     }
 }

@@ -52,6 +52,6 @@ public class childModels {
     }
 
     public String toString(){
-        return "Libelle : "+Libelle+"\nUrl : "+Url;
+        return Url;
     }
 }
